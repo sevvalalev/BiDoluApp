@@ -23,9 +23,9 @@ class FoodsVC: UIViewController {
         super.viewDidLoad()
         
         searchBar.delegate = self
-        customNib()
         collectionView.dataSource = self
         collectionView.delegate = self
+        customNib()
         configureLayout()
         FoodsRouter.createModule(ref: self)
     }
@@ -89,6 +89,7 @@ extension FoodsVC: UICollectionViewDelegate, UICollectionViewDataSource {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell {
             let model = presenter?.getFood(for: indexPath)
             cell.configureUI(with: model)
+            return cell
         }
         return UICollectionViewCell()
     }
