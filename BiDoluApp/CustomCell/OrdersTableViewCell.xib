@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrdersTableViewCell" rowHeight="118" id="KGk-i7-Jjw" customClass="OrdersTableViewCell" customModule="BiDoluApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="118"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="118"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xE5-Tv-SxV">
+                        <rect key="frame" x="75" y="8" width="261" height="102"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemek Adı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fae-YX-Xfs">
+                                <rect key="frame" x="46" y="8.0000000000000018" width="140.66666666666666" height="29.666666666666671"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FI6-xV-pab">
+                                <rect key="frame" x="46" y="34" width="94" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44c-rt-XYP">
+                                        <rect key="frame" x="42.666666666666657" y="0.0" width="9" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="LeC-L1-Fdb">
+                                        <rect key="frame" x="0.0" y="28" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="stepperControl:" destination="KGk-i7-Jjw" eventType="valueChanged" id="45C-4G-Ks0"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zku-IO-Kmr">
+                                <rect key="frame" x="192.66666666666669" y="39.666666666666664" width="60.333333333333343" height="22.666666666666664"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FI6-xV-pab" firstAttribute="leading" secondItem="xE5-Tv-SxV" secondAttribute="leading" constant="46" id="1Uf-4c-n9f"/>
+                            <constraint firstAttribute="trailing" secondItem="zku-IO-Kmr" secondAttribute="trailing" constant="8" id="5X4-Hp-aqX"/>
+                            <constraint firstItem="fae-YX-Xfs" firstAttribute="leading" secondItem="xE5-Tv-SxV" secondAttribute="leading" constant="46" id="JQB-xP-Bu8"/>
+                            <constraint firstAttribute="bottom" secondItem="FI6-xV-pab" secondAttribute="bottom" constant="8" id="WXC-hu-Nsh"/>
+                            <constraint firstItem="fae-YX-Xfs" firstAttribute="top" secondItem="xE5-Tv-SxV" secondAttribute="top" constant="8" id="YVF-db-Cam"/>
+                            <constraint firstItem="zku-IO-Kmr" firstAttribute="centerY" secondItem="xE5-Tv-SxV" secondAttribute="centerY" id="mH8-8W-rB3"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="0vX-Lr-Rk6">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="118"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="f9F-Dv-zyL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xE5-Tv-SxV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="3pG-is-CgU"/>
+                    <constraint firstAttribute="bottom" secondItem="xE5-Tv-SxV" secondAttribute="bottom" constant="8" id="779-dU-Hgn"/>
+                    <constraint firstAttribute="trailing" secondItem="xE5-Tv-SxV" secondAttribute="trailing" constant="8" id="C6h-ej-18N"/>
+                    <constraint firstItem="0vX-Lr-Rk6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LjX-fV-kO3"/>
+                    <constraint firstAttribute="bottom" secondItem="0vX-Lr-Rk6" secondAttribute="bottom" id="Oic-RM-qOf"/>
+                    <constraint firstItem="xE5-Tv-SxV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="75" id="vSy-pT-ICL"/>
+                    <constraint firstItem="0vX-Lr-Rk6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wdU-d7-bKR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="foodImage" destination="0vX-Lr-Rk6" id="ALU-7R-aAR"/>
+                <outlet property="foodName" destination="fae-YX-Xfs" id="XmV-R9-DLJ"/>
+                <outlet property="foodView" destination="xE5-Tv-SxV" id="EAr-D9-75q"/>
+                <outlet property="stepper" destination="LeC-L1-Fdb" id="ziU-Qd-aJ4"/>
+                <outlet property="stepperLabel" destination="44c-rt-XYP" id="49X-o8-Z3s"/>
+                <outlet property="totalLabel" destination="zku-IO-Kmr" id="nBl-Z3-sSl"/>
+            </connections>
+            <point key="canvasLocation" x="178.62595419847327" y="40.845070422535215"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pngwing.com" width="686" height="540"/>
+    </resources>
+</document>
