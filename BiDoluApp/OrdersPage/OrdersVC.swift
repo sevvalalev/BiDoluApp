@@ -38,8 +38,8 @@ class OrdersVC: UIViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        let customCellNib: UINib = UINib(nibName: "OrdersTableViewCell", bundle: nil)
-        tableView.register(customCellNib, forCellReuseIdentifier: "OrdersTableViewCell")
+        let customCellNib: UINib = UINib(nibName: C.Identifier.tableViewCell, bundle: nil)
+        tableView.register(customCellNib, forCellReuseIdentifier: C.Identifier.tableViewCell)
     }
     
     @IBAction private func deleteTapped(_ sender: UIBarButtonItem) {
@@ -64,7 +64,7 @@ extension OrdersVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "OrdersTableViewCell",for:indexPath) as? OrdersTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: C.Identifier.tableViewCell,for:indexPath) as? OrdersTableViewCell {
             cell.configureUI(with: foodList[indexPath.row])
             return cell
         }

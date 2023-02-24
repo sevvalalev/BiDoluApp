@@ -14,7 +14,7 @@ class OrdersInteractor: PresenterToInteractorFoodOrdersProtocol {
     
     func loadOrders(kullanici_adi: String) {
         let parameter = ["kullanici_adi":kullanici_adi]
-        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php",method: .post,parameters: parameter).response { response in
+        AF.request(C.URL.loadOrders,method: .post,parameters: parameter).response { response in
             if let data = response.data {
                 do{
                     let response = try JSONDecoder().decode(FoodOrdersAnswer.self, from: data)
@@ -31,7 +31,7 @@ class OrdersInteractor: PresenterToInteractorFoodOrdersProtocol {
     
     func deleteOrder(sepet_yemek_id: String, kullanici_adi: String) {
         let parameter = ["sepet_yemek_id":sepet_yemek_id,"kullanici_adi":kullanici_adi] as [String:Any]
-        AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php",method: .post,parameters: parameter).response {response in
+        AF.request(C.URL.deleteOrder,method: .post,parameters: parameter).response {response in
             if let data = response.data {
                 do{
                     let response = try JSONDecoder().decode(FoodOrdersAnswer.self, from: data)

@@ -22,7 +22,7 @@ class FoodsPresenter : ViewToPresenterFoodsProtocol {
     
     func search(searchWord: String) {
         searchedWord = searchWord
-        searchedItems = foodList.filter({ $0.yemek_adi?.lowercased().contains(searchWord.lowercased()) ?? false })
+        searchedItems = foodList.filter({$0.yemek_adi?.lowercased().contains(searchWord.lowercased()) ?? false })
         foodsView?.sendDataToView()
     }
     

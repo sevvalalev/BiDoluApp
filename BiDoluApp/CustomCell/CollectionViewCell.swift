@@ -17,7 +17,6 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet private var foodView: UIView!
     
     var foodList = [Foods]()
-    static let identifier = "CollectionViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,7 +37,7 @@ class CollectionViewCell: UICollectionViewCell {
         foodNameLabel.text = model.yemek_adi
         priceLabel.text = model.yemek_fiyat!
         foodImageView.kf.indicatorType = .activity
-        foodImageView.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(model.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+        foodImageView.kf.setImage(with: URL(string: "\(C.URL.pictures)\(model.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
     }
     
     @IBAction private func addButtonTapped(_ sender: UIButton) {

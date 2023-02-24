@@ -36,11 +36,11 @@ class DetailVC: UIViewController {
         DetailRouter.createModule(ref: self)
         
         if let food = foodList { 
-            foodImageName = "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"
+            foodImageName = "\(C.URL.pictures)\(food.yemek_resim_adi!)"
             foodNameLabel.text = food.yemek_adi
             totalLabel.text = food.yemek_fiyat!
             foodImage.kf.indicatorType = .activity
-            foodImage.kf.setImage(with: URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+            foodImage.kf.setImage(with: URL(string: "\(C.URL.pictures)\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
         }
         configureUI()
     }
@@ -68,7 +68,7 @@ class DetailVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toOrdersVC" {
+        if segue.identifier == C.Navigations.toOrder {
             if let food = sender as? FoodOrders {
                 let dest = segue.destination as! OrdersVC
                 dest.foodOrders = food
@@ -83,7 +83,7 @@ class DetailVC: UIViewController {
               let totalOrder = stepperLabel.text,
               let username = Auth.auth().currentUser?.email else { return }
         presenter?.addCard(yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: Int(foodPrice)!, yemek_siparis_adet: Int(totalOrder)!, kullanici_adi: username)
-        performSegue(withIdentifier: "toOrdersVC", sender: nil)
+        performSegue(withIdentifier: C.Navigations.toOrder, sender: nil)
     }
     
     @IBAction private func stepperControl(_ sender: UIStepper) {

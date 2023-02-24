@@ -9,7 +9,6 @@ import UIKit
 
 class OrdersTableViewCell: UITableViewCell {
 
-    static let identifier = "OrdersTableViewCell"
     @IBOutlet private var foodView: UIView!
     @IBOutlet private var foodImage: UIImageView!
     @IBOutlet private var foodName: UILabel!

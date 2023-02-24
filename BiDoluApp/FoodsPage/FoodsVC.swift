@@ -47,12 +47,12 @@ class FoodsVC: UIViewController {
     }
     
     private func customNib() {
-        let customCellNib: UINib = UINib(nibName: "CollectionViewCell", bundle: nil)
-        collectionView.register(customCellNib, forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        let customCellNib: UINib = UINib(nibName: C.Identifier.CollectionView, bundle: nil)
+        collectionView.register(customCellNib, forCellWithReuseIdentifier: C.Identifier.CollectionView)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetailVC" {
+        if segue.identifier == C.Navigations.toDetail {
             if let food = sender as? Foods {
                 let dest = segue.destination as! DetailVC
                 dest.foodList = food
@@ -86,7 +86,7 @@ extension FoodsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: C.Identifier.CollectionView, for: indexPath) as? CollectionViewCell {
             let model = presenter?.getFood(for: indexPath)
             cell.configureUI(with: model)
             return cell
@@ -96,7 +96,7 @@ extension FoodsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let food = presenter?.getFood(for: indexPath)
-        performSegue(withIdentifier: "toDetailVC", sender: food)
+        performSegue(withIdentifier: C.Navigations.toDetail, sender: food)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
