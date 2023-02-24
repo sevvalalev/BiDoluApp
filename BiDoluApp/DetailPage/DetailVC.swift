@@ -83,7 +83,6 @@ class DetailVC: UIViewController {
               let totalOrder = stepperLabel.text,
               let username = C.User.username else { return }
         presenter?.addCard(yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: Int(foodPrice)!, yemek_siparis_adet: Int(totalOrder)!, kullanici_adi: username)
-        performSegue(withIdentifier: C.Navigations.toOrder, sender: nil)
     }
     
     @IBAction private func stepperControl(_ sender: UIStepper) {
@@ -92,3 +91,8 @@ class DetailVC: UIViewController {
     
 }
 
+extension DetailVC: PresenterToViewDetailProtocol {
+    func navigateToOrdersVC() {
+        performSegue(withIdentifier: C.Navigations.toOrder, sender: nil)
+    }
+}

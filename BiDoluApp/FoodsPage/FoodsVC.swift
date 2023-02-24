@@ -14,12 +14,14 @@ class FoodsVC: UIViewController {
     @IBOutlet private var searchBar: UISearchBar!
     @IBOutlet private var sortingButton: UIButton!
     
+    
     private let spacing:CGFloat = 10
     
     var presenter:ViewToPresenterFoodsProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         searchBar.delegate = self
         collectionView.dataSource = self
@@ -58,6 +60,11 @@ class FoodsVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func randomFoodButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     
     @IBAction private func sortingTapped(_ sender: UIButton) {
         

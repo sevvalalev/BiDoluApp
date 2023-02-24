@@ -35,7 +35,7 @@ class CollectionViewCell: UICollectionViewCell {
         guard let model = model else { return }
         
         foodNameLabel.text = model.yemek_adi
-        priceLabel.text = "\(model.yemek_fiyat!)₺"
+        priceLabel.text = "\(model.yemek_fiyat!) ₺"
         foodImageView.kf.indicatorType = .activity
         foodImageView.kf.setImage(with: URL(string: "\(C.URL.pictures)\(model.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
     }

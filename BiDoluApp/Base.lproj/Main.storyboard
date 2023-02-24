@@ -205,14 +205,14 @@
                         <outlet property="loginButton" destination="9f9-dG-qz5" id="ilF-qp-baa"/>
                         <outlet property="loginView" destination="Tsg-Ct-wuI" id="8hO-uK-SCK"/>
                         <outlet property="passwordTextField" destination="VLe-YC-VWY" id="X3D-rA-rsx"/>
-                        <segue destination="RKq-du-QJ5" kind="show" identifier="toFoodsVC" id="Pau-B1-luB"/>
+                        <segue destination="RKq-du-QJ5" kind="show" identifier="toFoodsVC" id="Prm-Bg-npt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSu-xn-ORc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1975" y="-384"/>
         </scene>
-        <!--FoodsVC-->
+        <!--Item-->
         <scene sceneID="Pun-yx-5TW">
             <objects>
                 <viewController storyboardIdentifier="toFoodsVC" id="RKq-du-QJ5" customClass="FoodsVC" customModule="BiDoluApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -259,11 +259,33 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tu-z3-GqN">
+                                        <rect key="frame" x="273" y="45" width="133" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ne Yesem ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUn-Rc-UmH">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWk-uP-TxO">
+                                                <rect key="frame" x="84.5" y="0.0" width="48.5" height="34"/>
+                                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="questionmark.app" catalog="system"/>
+                                                <connections>
+                                                    <action selector="randomFoodButtonTapped:" destination="RKq-du-QJ5" eventType="touchUpInside" id="TSL-Y9-639"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="kaa-b3-dqg" firstAttribute="leading" secondItem="aPf-59-rMW" secondAttribute="leading" constant="16" id="15h-7z-pDM"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Tu-z3-GqN" secondAttribute="trailing" constant="8" id="9tB-xu-WgH"/>
                                     <constraint firstAttribute="bottom" secondItem="kaa-b3-dqg" secondAttribute="bottom" constant="10" id="CH3-2X-5eC"/>
+                                    <constraint firstItem="6Tu-z3-GqN" firstAttribute="top" secondItem="aPf-59-rMW" secondAttribute="top" constant="45" id="TaN-gx-2on"/>
                                     <constraint firstAttribute="height" constant="150" id="d91-hI-v6o"/>
                                 </constraints>
                             </view>
@@ -304,6 +326,7 @@
                             <constraint firstItem="9nY-O3-n5K" firstAttribute="trailing" secondItem="vdz-nZ-XY6" secondAttribute="trailing" id="yhT-kU-qib"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="bYX-5T-f7J"/>
                     <navigationItem key="navigationItem" id="1HX-y7-A6l"/>
                     <connections>
                         <outlet property="collectionView" destination="9nY-O3-n5K" id="zxa-4q-AK2"/>
@@ -314,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ica-97-8WD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2942.0289855072465" y="-66.294642857142861"/>
+            <point key="canvasLocation" x="3197" y="-104"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="knw-fs-EEN">
@@ -477,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgo-0u-4pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3818.8405797101454" y="-66.294642857142861"/>
+            <point key="canvasLocation" x="4074" y="-104"/>
         </scene>
         <!--OrdersVC-->
         <scene sceneID="bwE-SL-gr8">
@@ -573,7 +596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8R-gU-3OB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4650.7246376811599" y="-66.294642857142861"/>
+            <point key="canvasLocation" x="4906" y="-104"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="u7W-bw-o3x">
@@ -682,7 +705,7 @@
                         <outlet property="passwordTextField" destination="jbQ-O0-CUO" id="b0Q-08-ger"/>
                         <outlet property="registerButton" destination="MFd-eD-miU" id="uFv-VG-W8A"/>
                         <outlet property="registerView" destination="syV-EM-yOp" id="FkL-Mr-FW2"/>
-                        <segue destination="RKq-du-QJ5" kind="show" identifier="toFoodsVC" id="6Tc-pC-JGw"/>
+                        <segue destination="RKq-du-QJ5" kind="show" identifier="toFoodsVC" id="hId-Ft-H4A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2Y-Cp-I70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -711,13 +734,14 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Z7u-FR-oLG"/>
-        <segue reference="6Tc-pC-JGw"/>
+        <segue reference="hId-Ft-H4A"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="kayıt" width="426" height="421"/>
         <image name="pngwing.com" width="686" height="540"/>
+        <image name="questionmark.app" catalog="system" width="128" height="114"/>
         <image name="register" width="421" height="421"/>
         <image name="rlimage" width="428" height="926"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>

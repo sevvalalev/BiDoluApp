@@ -42,13 +42,14 @@ class OrdersVC: UIViewController {
     }
     
     @IBAction private func deleteTapped(_ sender: UIBarButtonItem) {
-       
+        //delete
     }
 }
 
 extension OrdersVC: PresenterToViewFoodOrdersProtocol {
-    func sendOrdersToView(foodList: [FoodOrders]) {
+    func sendOrdersToView(foodList: [FoodOrders], totalPrice: Int) {
         self.foodList = foodList
+        self.totalLabel.text = "\(totalPrice) ₺"
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }

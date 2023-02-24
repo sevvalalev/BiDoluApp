@@ -29,7 +29,7 @@ protocol InteractorToPresenterFoodOrdersProtocol {
 }
 
 protocol PresenterToViewFoodOrdersProtocol {
-    func sendOrdersToView(foodList: [FoodOrders])
+    func sendOrdersToView(foodList: [FoodOrders], totalPrice: Int)
 }
 
 protocol PresenterToRouterFoodOrdersProtocol {

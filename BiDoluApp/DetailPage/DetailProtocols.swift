@@ -10,19 +10,22 @@ import Foundation
 protocol ViewToPresenterFoodDetailProtocol {
     var interactor:PresenterToInteractorFoodDetailProtocol? {get set}
     func addCard(yemek_adi:String,yemek_resim_adi:String,yemek_fiyat:Int,yemek_siparis_adet:Int,kullanici_adi:String)
+    
+    var detailView:PresenterToViewDetailProtocol? {get set}
 }
 
 
 protocol PresenterToInteractorFoodDetailProtocol {
+    var presenter: InteractorToPresenterDetailProtocol? {get set}
     func addCard(yemek_adi:String,yemek_resim_adi:String,yemek_fiyat:Int,yemek_siparis_adet:Int,kullanici_adi:String)
 }
 
 protocol InteractorToPresenterDetailProtocol {
-    func sendDetailToPresenter(foodList: [FoodOrders])
+    func foodAddedToCard()
 }
 
 protocol PresenterToViewDetailProtocol {
-    func sendDetailToView(foodList: [FoodOrders])
+    func navigateToOrdersVC()
 }
 
 protocol PresenterToRouterFoodDetailProtocol {

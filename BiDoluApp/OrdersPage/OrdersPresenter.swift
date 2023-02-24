@@ -27,6 +27,26 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
 
 extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
     func sendOrdersToPresenter(foodList: [FoodOrders]) {
-        view?.sendOrdersToView(foodList: foodList)
+        let prices = foodList.compactMap({Int($0.yemek_fiyat ?? "0")})
+        let total = prices.reduce(0, +)
+        
+        var editedList: [FoodOrders] = []
+        
+        foodList.enumerated().forEach { (index, food) in
+            if editedList.contains(where: {$0.yemek_adi == food.yemek_adi}) {
+                var existingFood = food
+                let editedListFoodCount = Int(editedList.first(where: {$0.yemek_adi == food.yemek_adi})?.yemek_siparis_adet ?? "0") ?? 0
+                let foodCount = Int(food.yemek_siparis_adet ?? "0") ?? 0
+                let foodTotalItemCount = editedListFoodCount + foodCount
+                
+                let editedListIndex = editedList.firstIndex(where: { $0.yemek_adi == existingFood.yemek_adi })
+                existingFood.yemek_siparis_adet = "\(foodTotalItemCount)"
+                editedList[editedListIndex ?? 0] = existingFood
+            } else {
+                editedList.append(food)
+            }
+        }
+        
+        view?.sendOrdersToView(foodList: editedList, totalPrice: total)
     }
 }

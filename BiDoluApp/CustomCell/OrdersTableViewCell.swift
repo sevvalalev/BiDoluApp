@@ -31,11 +31,17 @@ class OrdersTableViewCell: UITableViewCell {
     }
     
     func configureUI(with food: FoodOrders) {
+        /*var foodTotal: Double? = Double(totalLabel.text!)
+        var piece: Double? = Double(stepperLabel.text!)
+        var result = foodTotal * piece
+        print(result)
+        */
         foodName.text = food.yemek_adi!
         totalLabel.text = "\(food.yemek_fiyat!) ₺"
         stepperLabel.text = "\(food.yemek_siparis_adet!)"
         foodImage.kf.indicatorType = .activity
         foodImage.kf.setImage(with:URL(string: "\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+        
         
     }
     
