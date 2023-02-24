@@ -81,7 +81,7 @@ class DetailVC: UIViewController {
               let foodImageName = foodImageName,
               let foodPrice = totalLabel.text,
               let totalOrder = stepperLabel.text,
-              let username = Auth.auth().currentUser?.email else { return }
+              let username = C.User.username else { return }
         presenter?.addCard(yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: Int(foodPrice)!, yemek_siparis_adet: Int(totalOrder)!, kullanici_adi: username)
         performSegue(withIdentifier: C.Navigations.toOrder, sender: nil)
     }

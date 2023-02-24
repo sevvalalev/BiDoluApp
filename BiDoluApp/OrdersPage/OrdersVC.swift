@@ -18,7 +18,6 @@ class OrdersVC: UIViewController {
     var foodList = [FoodOrders]()
     var foodOrders: FoodOrders?
     var presenter: ViewToPresenterFoodOrdersProtocol?
-    var username = Auth.auth().currentUser?.email
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,7 @@ class OrdersVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        guard let username = username else {return}
+        guard let username = C.User.username else {return}
         presenter?.loadOrders(kullanici_adi: username)
     }
     
@@ -84,7 +83,7 @@ extension OrdersVC: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(cancelAction)
             
             let okAction = UIAlertAction(title: "Evet", style: .destructive) { action in
-                self.presenter?.deleteOrder(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: self.username!)
+                self.presenter?.deleteOrder(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: C.User.username!)
             }
             alert.addAction(okAction)
             tableView.reloadData()
