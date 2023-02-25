@@ -11,10 +11,10 @@ protocol ViewToPresenterFoodOrdersProtocol {
     var interactor:PresenterToInteractorFoodOrdersProtocol? {get set}
     var view:PresenterToViewFoodOrdersProtocol? {get set}
     
-    func giveOrder()
     func loadOrders(kullanici_adi:String)
     func deleteOrder(sepet_yemek_id:String,kullanici_adi:String)
     func deleteCard()
+    func orderButtonTapped()
 }
 
 protocol PresenterToInteractorFoodOrdersProtocol {
@@ -32,6 +32,7 @@ protocol InteractorToPresenterFoodOrdersProtocol {
 
 protocol PresenterToViewFoodOrdersProtocol {
     func sendOrdersToView(foodList: [FoodOrders], totalPrice: Int)
+    func playLottie(lottieFile: String)
 }
 
 protocol PresenterToRouterFoodOrdersProtocol {

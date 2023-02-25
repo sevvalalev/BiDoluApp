@@ -78,8 +78,8 @@
             filePath = "BiDoluApp/OrdersPage/OrdersVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "sendOrdersToView(foodList:totalPrice:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -112,7 +112,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "465">
+                  offsetFromSymbolStart = "474">
                </Location>
                <Location
                   uuid = "65F78927-F967-41AD-BD0D-815DD744A7D2 - b64de7ef10c7be0a"
@@ -127,7 +127,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "501">
+                  offsetFromSymbolStart = "510">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -209,6 +209,22 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "deleteCard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D7F6087-18DD-41F8-865B-771740E5ECDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BiDoluApp/OrdersPage/OrdersVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "playLottie(lottieFile:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

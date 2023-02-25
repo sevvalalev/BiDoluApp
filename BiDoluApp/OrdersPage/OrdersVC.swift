@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import Kingfisher
+import Lottie
 
 class OrdersVC: UIViewController {
     
@@ -41,6 +42,10 @@ class OrdersVC: UIViewController {
         tableView.register(customCellNib, forCellReuseIdentifier: C.Identifier.tableViewCell)
     }
     
+    @IBAction private func orderButtonTapped(_ sender: Any) {
+        presenter?.orderButtonTapped()
+    }
+    
     @IBAction private func deleteTapped(_ sender: UIBarButtonItem) {
         presenter?.deleteCard()
     }
@@ -55,6 +60,19 @@ extension OrdersVC: PresenterToViewFoodOrdersProtocol {
         }
     }
     
+    func playLottie(lottieFile: String) {
+        let animationView = AnimationView(name: lottieFile)
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .playOnce
+        animationView.animationSpeed = 0.5
+        view.addSubview(animationView)
+        view.bringSubviewToFront(animationView)
+        animationView.play {[weak self] _ in
+            animationView.removeFromSuperview()
+            self?.presenter?.deleteCard()
+        }
+    }
 }
 
 extension OrdersVC: UITableViewDelegate, UITableViewDataSource {

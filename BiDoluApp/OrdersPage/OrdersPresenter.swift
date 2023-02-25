@@ -15,8 +15,8 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
     
     private let dispatchGroup = DispatchGroup()
     
-    func giveOrder() {
-        
+    func orderButtonTapped() {
+        view?.playLottie(lottieFile: C.LottieFiles.boxDelivery)
     }
     
     func loadOrders(kullanici_adi: String) {
@@ -42,6 +42,7 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
 
 extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
     func sendOrdersToPresenter(foodList: [FoodOrders]) {
+        self.foodList = foodList
         let prices = foodList.compactMap({Int($0.yemek_fiyat ?? "0")})
         let total = prices.reduce(0, +)
         
@@ -61,7 +62,6 @@ extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
                 editedList.append(food)
             }
         }
-        self.foodList = editedList
         view?.sendOrdersToView(foodList: editedList, totalPrice: total)
     }
     

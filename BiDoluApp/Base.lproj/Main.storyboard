@@ -511,25 +511,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKs-8c-hoc">
-                                <rect key="frame" x="0.0" y="795.5" width="405" height="100.5"/>
+                                <rect key="frame" x="0.0" y="795.5" width="414" height="100.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="dtR-lt-JML">
-                                        <rect key="frame" x="20" y="15" width="365" height="35"/>
+                                        <rect key="frame" x="20" y="15" width="374" height="35"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JmX-ix-3hk">
-                                                <rect key="frame" x="0.0" y="0.0" width="179" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="35"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cpP-Bx-548">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="35"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total :" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDu-2o-7wY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="35"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total :" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDu-2o-7wY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.88 ₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfN-cR-oF5">
-                                                                <rect key="frame" x="100.5" y="0.0" width="78.5" height="35"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="8.88 ₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfN-cR-oF5">
+                                                                <rect key="frame" x="109.5" y="0.0" width="78.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
                                                                 <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -542,7 +542,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGS-Ct-Y1v">
-                                                <rect key="frame" x="245" y="0.0" width="120" height="35"/>
+                                                <rect key="frame" x="254" y="0.0" width="120" height="35"/>
                                                 <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="25F-Oh-BNx"/>
@@ -551,6 +551,9 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sipariş Ver"/>
+                                                <connections>
+                                                    <action selector="orderButtonTapped:" destination="Md2-Rz-h66" eventType="touchUpInside" id="3Kl-fF-cyb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -564,7 +567,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-lx-wLY">
-                                <rect key="frame" x="0.0" y="92" width="405" height="683.5"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="683.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>

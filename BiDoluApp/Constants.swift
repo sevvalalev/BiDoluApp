@@ -28,4 +28,9 @@ struct C {
     struct User {
         static let username = Auth.auth().currentUser?.email
     }
+    struct LottieFiles {
+        static let boxDelivery = "boxdelivery"
+        static let yellowDelivery = "yellowdelivery"
+        static let food = "food"
+    }
 }
