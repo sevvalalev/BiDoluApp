@@ -23,7 +23,7 @@ class OrdersVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        navigationController?.navigationBar.isHidden = false
         configureTableView()
         OrdersRouter.createModule(ref: self)
         orderButton.layer.cornerRadius = 15
@@ -38,6 +38,7 @@ class OrdersVC: UIViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.separatorStyle = .none
         let customCellNib: UINib = UINib(nibName: C.Identifier.tableViewCell, bundle: nil)
         tableView.register(customCellNib, forCellReuseIdentifier: C.Identifier.tableViewCell)
     }
@@ -90,7 +91,7 @@ extension OrdersVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 110
     }
     
     

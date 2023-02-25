@@ -19,28 +19,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xE5-Tv-SxV">
                         <rect key="frame" x="75" y="8" width="261" height="102"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemek Adı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fae-YX-Xfs">
-                                <rect key="frame" x="46" y="8.0000000000000018" width="140.66666666666666" height="29.666666666666671"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FI6-xV-pab">
-                                <rect key="frame" x="46" y="34" width="94" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44c-rt-XYP">
-                                        <rect key="frame" x="42.666666666666657" y="0.0" width="9" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="LeC-L1-Fdb">
-                                        <rect key="frame" x="0.0" y="28" width="94" height="32"/>
-                                        <connections>
-                                            <action selector="stepperControl:" destination="KGk-i7-Jjw" eventType="valueChanged" id="45C-4G-Ks0"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FI6-xV-pab">
+                                <rect key="frame" x="46" y="70" width="9" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zku-IO-Kmr">
                                 <rect key="frame" x="192.66666666666669" y="39.666666666666664" width="60.333333333333343" height="22.666666666666664"/>
@@ -48,15 +29,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TqR-VD-PgO">
+                                <rect key="frame" x="50" y="22.333333333333332" width="140.66666666666666" height="57.666666666666671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemek Adı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fae-YX-Xfs">
+                                        <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="29.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wdJ-KI-WIx">
+                                        <rect key="frame" x="0.0" y="33.666666666666671" width="52.666666666666664" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44c-rt-XYP">
+                                                <rect key="frame" x="0.0" y="0.0" width="9" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ied-Ay-txg">
+                                                <rect key="frame" x="16.999999999999996" y="0.0" width="35.666666666666657" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FI6-xV-pab" firstAttribute="leading" secondItem="xE5-Tv-SxV" secondAttribute="leading" constant="46" id="1Uf-4c-n9f"/>
                             <constraint firstAttribute="trailing" secondItem="zku-IO-Kmr" secondAttribute="trailing" constant="8" id="5X4-Hp-aqX"/>
-                            <constraint firstItem="fae-YX-Xfs" firstAttribute="leading" secondItem="xE5-Tv-SxV" secondAttribute="leading" constant="46" id="JQB-xP-Bu8"/>
-                            <constraint firstAttribute="bottom" secondItem="FI6-xV-pab" secondAttribute="bottom" constant="8" id="WXC-hu-Nsh"/>
-                            <constraint firstItem="fae-YX-Xfs" firstAttribute="top" secondItem="xE5-Tv-SxV" secondAttribute="top" constant="8" id="YVF-db-Cam"/>
+                            <constraint firstItem="TqR-VD-PgO" firstAttribute="leading" secondItem="xE5-Tv-SxV" secondAttribute="leading" constant="50" id="bQ5-oy-0PD"/>
                             <constraint firstItem="zku-IO-Kmr" firstAttribute="centerY" secondItem="xE5-Tv-SxV" secondAttribute="centerY" id="mH8-8W-rB3"/>
+                            <constraint firstItem="TqR-VD-PgO" firstAttribute="centerY" secondItem="xE5-Tv-SxV" secondAttribute="centerY" id="sdI-3D-Ce2"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="0vX-Lr-Rk6">
@@ -81,7 +88,6 @@
                 <outlet property="foodImage" destination="0vX-Lr-Rk6" id="ALU-7R-aAR"/>
                 <outlet property="foodName" destination="fae-YX-Xfs" id="XmV-R9-DLJ"/>
                 <outlet property="foodView" destination="xE5-Tv-SxV" id="EAr-D9-75q"/>
-                <outlet property="stepper" destination="LeC-L1-Fdb" id="ziU-Qd-aJ4"/>
                 <outlet property="stepperLabel" destination="44c-rt-XYP" id="49X-o8-Z3s"/>
                 <outlet property="totalLabel" destination="zku-IO-Kmr" id="nBl-Z3-sSl"/>
             </connections>

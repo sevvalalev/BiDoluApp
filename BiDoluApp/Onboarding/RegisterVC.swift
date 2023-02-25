@@ -23,16 +23,20 @@ class RegisterVC: UIViewController {
     }
     
     private func configureUI() {
-        emailTextField.layer.cornerRadius = 15
-        passwordTextField.layer.cornerRadius = 15
-        emailTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
-        passwordTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
-        emailTextField.layer.borderWidth = 1
-        emailTextField.clipsToBounds = true
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.clipsToBounds = true
+        registerView.layer.borderColor = UIColor(named: "onboardingCornerColor")?.cgColor
+        registerView.layer.borderWidth = 2
         registerView.layer.cornerRadius = 20
         
+        emailTextField.layer.cornerRadius = 15
+        emailTextField.layer.borderWidth = 1
+        emailTextField.clipsToBounds = true
+        emailTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
+        
+        passwordTextField.layer.cornerRadius = 15
+        passwordTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
+        passwordTextField.layer.borderWidth = 1
+        passwordTextField.clipsToBounds = true
+     
         registerButton.layer.cornerRadius = 15
     }
     

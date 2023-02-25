@@ -26,15 +26,19 @@ class LoginVC: UIViewController {
     }
     
     private func configureUI() {
+        loginView.layer.borderColor = UIColor(named: "onboardingCornerColor")?.cgColor
+        loginView.layer.borderWidth = 2
+        loginView.layer.cornerRadius = 20
+        
         emailTextField.layer.cornerRadius = 15
-        passwordTextField.layer.cornerRadius = 15
         emailTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
-        passwordTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
         emailTextField.layer.borderWidth = 1
         emailTextField.clipsToBounds = true
+        
+        passwordTextField.layer.cornerRadius = 15
+        passwordTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
         passwordTextField.layer.borderWidth = 1
         passwordTextField.clipsToBounds = true
-        loginView.layer.cornerRadius = 20
         
         loginButton.layer.cornerRadius = 15
     }

@@ -21,6 +21,7 @@ class DetailVC: UIViewController {
     @IBOutlet private var stepperLabel: UILabel!
     @IBOutlet private var stepper: UIStepper!
     @IBOutlet private var addCardButton: UIButton!
+    @IBOutlet weak var stableLabel: UILabel!
     
     var foodList:Foods?
     var foodOrders: FoodOrders?
@@ -47,6 +48,7 @@ class DetailVC: UIViewController {
 
 
     private func configureUI() {
+        
         addCardButton.layer.cornerRadius = 15
         
         detailView.layer.cornerRadius = 40
