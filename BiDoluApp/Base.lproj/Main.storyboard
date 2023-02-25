@@ -260,22 +260,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tu-z3-GqN">
-                                        <rect key="frame" x="290.5" y="45" width="115.5" height="34"/>
+                                        <rect key="frame" x="264.5" y="45" width="141.5" height="38"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ne Yesem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUn-Rc-UmH">
-                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="34"/>
-                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="14"/>
-                                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWk-uP-TxO">
-                                                <rect key="frame" x="67.5" y="0.0" width="48" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="48" id="a5m-Lm-MS4"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="38"/>
                                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="questionmark.app" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="fortune" imagePlacement="trailing" title="Ne Yesem ? "/>
                                                 <connections>
                                                     <action selector="randomFoodButtonTapped:" destination="RKq-du-QJ5" eventType="touchUpInside" id="TSL-Y9-639"/>
                                                 </connections>
@@ -283,7 +274,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRh-e7-j8J">
-                                        <rect key="frame" x="358" y="89" width="48" height="34"/>
+                                        <rect key="frame" x="358" y="93" width="48" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Q1r-mF-ymn"/>
                                         </constraints>
@@ -760,9 +751,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="fortune" width="24" height="24"/>
         <image name="kayıt" width="426" height="421"/>
         <image name="pngwing.com" width="686" height="540"/>
-        <image name="questionmark.app" catalog="system" width="128" height="114"/>
         <image name="register" width="421" height="421"/>
         <image name="rlimage" width="428" height="926"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>

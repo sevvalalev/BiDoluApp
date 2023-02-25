@@ -43,8 +43,8 @@
 		A4C53DB429A2662F003DBACC /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C53DB229A2662F003DBACC /* OrdersTableViewCell.xib */; };
 		A4E60A8C29942ED70013A3CE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60A8B29942ED70013A3CE /* LoginVC.swift */; };
 		A4E60A8E29942EEB0013A3CE /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60A8D29942EEB0013A3CE /* RegisterVC.swift */; };
+		E419CC4729AAA1AA00801B07 /* foodWheel.json in Resources */ = {isa = PBXBuildFile; fileRef = E419CC4629AAA1AA00801B07 /* foodWheel.json */; };
 		E4EB05E829AA223600A135E4 /* order.json in Resources */ = {isa = PBXBuildFile; fileRef = E4EB05E729AA223600A135E4 /* order.json */; };
-		E4EB05F829AA2C5900A135E4 /* foodWheel.json in Resources */ = {isa = PBXBuildFile; fileRef = E4EB05F729AA2C5900A135E4 /* foodWheel.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,8 +88,8 @@
 		A4C53DB229A2662F003DBACC /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
 		A4E60A8B29942ED70013A3CE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A4E60A8D29942EEB0013A3CE /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		E419CC4629AAA1AA00801B07 /* foodWheel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foodWheel.json; sourceTree = "<group>"; };
 		E4EB05E729AA223600A135E4 /* order.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
-		E4EB05F729AA2C5900A135E4 /* foodWheel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foodWheel.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +194,7 @@
 				A43DEF8E299405F30000EA1C /* LaunchScreen.storyboard */,
 				A43DEF91299405F30000EA1C /* Info.plist */,
 				A4276885299C0A9A00CAC315 /* GoogleService-Info.plist */,
-				E4EB05F729AA2C5900A135E4 /* foodWheel.json */,
+				E419CC4629AAA1AA00801B07 /* foodWheel.json */,
 				A49D86542996E1C10010628F /* boxdelivery.json */,
 				A49D86562996E1C70010628F /* yellowdelivery.json */,
 				E4EB05E729AA223600A135E4 /* order.json */,
@@ -293,10 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C53DB429A2662F003DBACC /* OrdersTableViewCell.xib in Resources */,
+				E419CC4729AAA1AA00801B07 /* foodWheel.json in Resources */,
 				A43DEF90299405F30000EA1C /* LaunchScreen.storyboard in Resources */,
 				A4276886299C0A9B00CAC315 /* GoogleService-Info.plist in Resources */,
 				A43DEF8D299405F30000EA1C /* Assets.xcassets in Resources */,
-				E4EB05F829AA2C5900A135E4 /* foodWheel.json in Resources */,
 				A49D86572996E1C70010628F /* yellowdelivery.json in Resources */,
 				A49D86552996E1C20010628F /* boxdelivery.json in Resources */,
 				A43DEF8B299405EF0000EA1C /* Main.storyboard in Resources */,
@@ -528,7 +528,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6797435H3L;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BiDoluApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BiDolu;
@@ -537,6 +537,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,6 +571,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

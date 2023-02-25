@@ -82,17 +82,17 @@ extension FoodsVC : PresenterToViewFoodsProtocol {
     
     func animateLottie(filename: String) {
         let containerView = UIView()
-        containerView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
         view.addSubview(containerView)
+        containerView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        view.bringSubviewToFront(containerView)
         let animationView = AnimationView(name: filename)
         animationView.frame = view.bounds
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .playOnce
-        animationView.animationSpeed = 1
+        animationView.animationSpeed = 1.5
         containerView.addSubview(animationView)
-        view.bringSubviewToFront(animationView)
         animationView.play {[weak self] _ in
-            animationView.removeFromSuperview()
+            containerView.removeFromSuperview()
             self?.presenter?.lottieCompleted()
         }
     }
