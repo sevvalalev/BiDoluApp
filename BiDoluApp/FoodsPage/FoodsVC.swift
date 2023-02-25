@@ -116,6 +116,7 @@ extension FoodsVC: UICollectionViewDelegate, UICollectionViewDataSource {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: C.Identifier.CollectionView, for: indexPath) as? CollectionViewCell {
             let model = presenter?.getFood(for: indexPath)
             cell.configureUI(with: model)
+            cell.delegate = self
             return cell
         }
         return UICollectionViewCell()
@@ -126,6 +127,13 @@ extension FoodsVC: UICollectionViewDelegate, UICollectionViewDataSource {
         guard let food = food else { return }
         navigateToDetailVC(food: food)
         collectionView.deselectItem(at: indexPath, animated: true)
+    }
+}
+
+extension FoodsVC: SelectedFoodProtocol {
+    func addSelectedFood(with food: Foods?) {
+        guard let food = food else { return }
+        presenter?.addFoodToCard(food: food)
     }
 }
 

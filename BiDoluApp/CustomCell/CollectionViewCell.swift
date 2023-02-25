@@ -8,15 +8,21 @@
 import UIKit
 import Kingfisher
 
+protocol SelectedFoodProtocol {
+    func addSelectedFood(with food: Foods?)
+}
+
 class CollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var foodNameLabel: UILabel!
-    @IBOutlet var foodImageView: UIImageView!
-    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet private var foodNameLabel: UILabel!
+    @IBOutlet private var foodImageView: UIImageView!
+    @IBOutlet private var priceLabel: UILabel!
     @IBOutlet private var addButton: UIButton!
     @IBOutlet private var foodView: UIView!
     
-    var foodList = [Foods]()
+    var currentFood: Foods?
+    
+    var delegate: SelectedFoodProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,7 +39,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     func configureUI(with model: Foods?) {
         guard let model = model else { return }
-        
+        currentFood = model
         foodNameLabel.text = model.yemek_adi
         priceLabel.text = "\(model.yemek_fiyat!) ₺"
         foodImageView.kf.indicatorType = .activity
@@ -41,6 +47,6 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction private func addButtonTapped(_ sender: UIButton) {
-        
+        delegate?.addSelectedFood(with: currentFood)
     }
 }

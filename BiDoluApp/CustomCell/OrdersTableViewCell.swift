@@ -36,7 +36,8 @@ class OrdersTableViewCell: UITableViewCell {
         var result = foodTotal * piece */
         
         foodName.text = food.yemek_adi!
-        totalLabel.text = "\(food.yemek_fiyat!) ₺"
+        let total = (Int(food.yemek_fiyat ?? "0") ?? 0) * (Int(food.yemek_siparis_adet ?? "0") ?? 0)
+        totalLabel.text = "\(total) ₺"
         stepperLabel.text = "\(food.yemek_siparis_adet!)"
         foodImage.kf.indicatorType = .activity
         foodImage.kf.setImage(with:URL(string: "\(food.yemek_resim_adi!)"), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)

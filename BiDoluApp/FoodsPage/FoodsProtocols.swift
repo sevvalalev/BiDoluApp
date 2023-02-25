@@ -18,12 +18,14 @@ protocol ViewToPresenterFoodsProtocol {
     func getFood(for indexPath: IndexPath) -> Foods
     func randomFoodTapped()
     func lottieCompleted()
+    func addFoodToCard(food: Foods)
 }
 
 protocol PresenterToInteractorFoodsProtocol {
     var presenter: InteractorToPresenterFoodsProtocol? {get set}
     
     func loadFoods()
+    func addCard(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_adet: Int, kullanici_adi: String)
 }
 
 //Taşıyıcı Protocoller

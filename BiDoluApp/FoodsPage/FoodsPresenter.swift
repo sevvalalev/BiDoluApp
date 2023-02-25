@@ -50,6 +50,14 @@ class FoodsPresenter : ViewToPresenterFoodsProtocol {
         let randomFood = foodList.randomElement() ?? foodList[0]
         foodsView?.navigateToDetailVC(food: randomFood)
     }
+    
+    func addFoodToCard(food: Foods) {
+        interactor?.addCard(yemek_adi: food.yemek_adi ?? "",
+                            yemek_resim_adi: "\(C.URL.pictures)\(food.yemek_resim_adi ?? "")",
+                            yemek_fiyat: Int(food.yemek_fiyat ?? "0") ?? 0,
+                            yemek_siparis_adet: 1,
+                            kullanici_adi: C.User.username ?? "")
+    }
 }
 
 extension FoodsPresenter : InteractorToPresenterFoodsProtocol {
