@@ -68,7 +68,7 @@ class FoodsVC: UIViewController {
     
     
     @IBAction private func sortingTapped(_ sender: UIButton) {
-        
+        presenter?.sortFoodPrice()
     }
 }
 

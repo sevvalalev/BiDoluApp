@@ -33,6 +33,7 @@ protocol InteractorToPresenterFoodOrdersProtocol {
 protocol PresenterToViewFoodOrdersProtocol {
     func sendOrdersToView(foodList: [FoodOrders], totalPrice: Int)
     func playLottie(lottieFile: String)
+    func hideHUD()
 }
 
 protocol PresenterToRouterFoodOrdersProtocol {

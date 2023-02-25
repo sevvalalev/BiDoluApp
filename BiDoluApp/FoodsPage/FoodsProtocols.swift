@@ -19,6 +19,7 @@ protocol ViewToPresenterFoodsProtocol {
     func randomFoodTapped()
     func lottieCompleted()
     func addFoodToCard(food: Foods)
+    func sortFoodPrice()
 }
 
 protocol PresenterToInteractorFoodsProtocol {

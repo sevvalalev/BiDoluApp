@@ -15,6 +15,7 @@ class FoodsPresenter : ViewToPresenterFoodsProtocol {
     private var foodList: [Foods] = []
     private var searchedItems: [Foods] = []
     private var searchedWord: String = ""
+    private var isSortActive: Bool = false
     
     func loadFoods() {
         interactor?.loadFoods()
@@ -39,6 +40,17 @@ class FoodsPresenter : ViewToPresenterFoodsProtocol {
             return foodList
         } else {
             return searchedItems
+        }
+    }
+    
+    func sortFoodPrice() {
+        isSortActive.toggle()
+        
+        if isSortActive {
+            foodList = foodList.sorted(by: { Int($0.yemek_fiyat ?? "0") ?? 0 < Int($1.yemek_fiyat ?? "0") ?? 0 })
+            foodsView?.sendDataToView()
+        } else {
+            loadFoods()
         }
     }
     

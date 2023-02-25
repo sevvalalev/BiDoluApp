@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseAuth
+import ProgressHUD
 
 class RegisterVC: UIViewController {
 
@@ -43,7 +44,9 @@ class RegisterVC: UIViewController {
     @IBAction private func registerButtonTapped(_ sender: UIButton) {
         
         if emailTextField.text != "" && passwordTextField.text != "" {
+            ProgressHUD.show("Kayıt Yapılıyor", interaction: false)
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authdata, error in
+                ProgressHUD.dismiss()
                 if error != nil {
                     self.makeAlert(titleInput: "Hata", messageInput: error?.localizedDescription ?? "Bir hata mevcut tekrar giriş yapmayı deneyin.")
                 }else{

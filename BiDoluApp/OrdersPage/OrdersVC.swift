@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import Kingfisher
 import Lottie
+import ProgressHUD
 
 class OrdersVC: UIViewController {
     
@@ -48,17 +49,24 @@ class OrdersVC: UIViewController {
     }
     
     @IBAction private func deleteTapped(_ sender: UIBarButtonItem) {
+        ProgressHUD.show("Siliniyor")
         presenter?.deleteCard()
+        
     }
 }
 
 extension OrdersVC: PresenterToViewFoodOrdersProtocol {
+    
     func sendOrdersToView(foodList: [FoodOrders], totalPrice: Int) {
         self.foodList = foodList
         self.totalLabel.text = "\(totalPrice) ₺"
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    func hideHUD() {
+        ProgressHUD.dismiss()
     }
     
     func playLottie(lottieFile: String) {

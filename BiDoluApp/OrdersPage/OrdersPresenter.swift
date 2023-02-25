@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ProgressHUD
 
 class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
     var interactor: PresenterToInteractorFoodOrdersProtocol?
@@ -42,6 +43,7 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
 
 extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
     func sendOrdersToPresenter(foodList: [FoodOrders]) {
+        view?.hideHUD()
         self.foodList = foodList
         let prices = foodList.compactMap({Int($0.yemek_fiyat ?? "0")})
         let total = prices.reduce(0, +)

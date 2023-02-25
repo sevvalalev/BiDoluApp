@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import FirebaseAuth
+import ProgressHUD
 
 class DetailVC: UIViewController {
 
@@ -69,9 +70,12 @@ class DetailVC: UIViewController {
         detailView.layer.borderWidth = 2
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == C.Navigations.toOrder {
+            ProgressHUD.show("Sepete Ekleniyor")
             if let food = sender as? FoodOrders {
+                ProgressHUD.dismiss()
                 let dest = segue.destination as! OrdersVC
                 dest.foodOrders = food
             }

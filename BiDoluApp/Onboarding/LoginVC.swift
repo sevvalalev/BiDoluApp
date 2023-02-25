@@ -48,7 +48,7 @@ class LoginVC: UIViewController {
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
         
         if emailTextField.text != "" && passwordTextField.text != "" {
-            ProgressHUD.show("Yükleniyor", interaction: false)
+            ProgressHUD.show("Giriş Yapılıyor", interaction: false)
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authdata, error in
                 ProgressHUD.dismiss()
                 if error != nil {
