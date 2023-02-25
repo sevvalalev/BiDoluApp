@@ -65,7 +65,7 @@ extension OrdersVC: PresenterToViewFoodOrdersProtocol {
         animationView.frame = view.bounds
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .playOnce
-        animationView.animationSpeed = 0.5
+        animationView.animationSpeed = 0.8
         view.addSubview(animationView)
         view.bringSubviewToFront(animationView)
         animationView.play {[weak self] _ in

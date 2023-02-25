@@ -16,6 +16,8 @@ protocol ViewToPresenterFoodsProtocol {
     func search(searchWord:String)
     func getListCount() -> Int
     func getFood(for indexPath: IndexPath) -> Foods
+    func randomFoodTapped()
+    func lottieCompleted()
 }
 
 protocol PresenterToInteractorFoodsProtocol {
@@ -31,6 +33,8 @@ protocol InteractorToPresenterFoodsProtocol {
 
 protocol PresenterToViewFoodsProtocol {
     func sendDataToView()
+    func animateLottie(filename: String)
+    func navigateToDetailVC(food: Foods)
 }
 
 //Router Protocol

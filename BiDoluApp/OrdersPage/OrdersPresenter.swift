@@ -16,7 +16,7 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
     private let dispatchGroup = DispatchGroup()
     
     func orderButtonTapped() {
-        view?.playLottie(lottieFile: C.LottieFiles.boxDelivery)
+        view?.playLottie(lottieFile: C.LottieFiles.order)
     }
     
     func loadOrders(kullanici_adi: String) {

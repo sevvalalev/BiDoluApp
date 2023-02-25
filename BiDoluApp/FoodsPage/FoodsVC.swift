@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+import Lottie
 
 class FoodsVC: UIViewController {
     
@@ -61,8 +61,8 @@ class FoodsVC: UIViewController {
         }
     }
     
-    @IBAction func randomFoodButtonTapped(_ sender: UIButton) {
-        
+    @IBAction private func randomFoodButtonTapped(_ sender: UIButton) {
+        presenter?.randomFoodTapped()
     }
     
     
@@ -77,6 +77,27 @@ extension FoodsVC : PresenterToViewFoodsProtocol {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
+    }
+    
+    func animateLottie(filename: String) {
+        let containerView = UIView()
+        containerView.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        view.addSubview(containerView)
+        let animationView = AnimationView(name: filename)
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .playOnce
+        animationView.animationSpeed = 1
+        containerView.addSubview(animationView)
+        view.bringSubviewToFront(animationView)
+        animationView.play {[weak self] _ in
+            animationView.removeFromSuperview()
+            self?.presenter?.lottieCompleted()
+        }
+    }
+    
+    func navigateToDetailVC(food: Foods) {
+        performSegue(withIdentifier: C.Navigations.toDetail, sender: food)
     }
 }
 
@@ -102,7 +123,8 @@ extension FoodsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let food = presenter?.getFood(for: indexPath)
-        performSegue(withIdentifier: C.Navigations.toDetail, sender: food)
+        guard let food = food else { return }
+        navigateToDetailVC(food: food)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

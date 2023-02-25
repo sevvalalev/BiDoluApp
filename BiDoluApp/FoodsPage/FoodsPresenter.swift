@@ -41,6 +41,15 @@ class FoodsPresenter : ViewToPresenterFoodsProtocol {
             return searchedItems
         }
     }
+    
+    func randomFoodTapped() {
+        foodsView?.animateLottie(filename: C.LottieFiles.foodWheel)
+    }
+    
+    func lottieCompleted() {
+        let randomFood = foodList.randomElement() ?? foodList[0]
+        foodsView?.navigateToDetailVC(food: randomFood)
+    }
 }
 
 extension FoodsPresenter : InteractorToPresenterFoodsProtocol {

@@ -31,6 +31,7 @@ struct C {
     struct LottieFiles {
         static let boxDelivery = "boxdelivery"
         static let yellowDelivery = "yellowdelivery"
-        static let food = "food"
+        static let order = "order"
+        static let foodWheel = "foodWheel"
     }
 }

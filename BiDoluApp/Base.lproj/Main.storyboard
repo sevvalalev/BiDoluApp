@@ -351,13 +351,13 @@
                                 <rect key="frame" x="20" y="112" width="374" height="730"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="WfQ-5U-HlG">
-                                        <rect key="frame" x="20" y="30" width="334" height="394"/>
+                                        <rect key="frame" x="20" y="30" width="334" height="358.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPU-ge-ABU">
                                         <rect key="frame" x="45" y="461" width="284" height="224"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="iQA-4u-RrU">
-                                                <rect key="frame" x="57.5" y="37.5" width="169.5" height="178"/>
+                                                <rect key="frame" x="57.5" y="23" width="169.5" height="178"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemek Adı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NB-b1-GkM">
                                                         <rect key="frame" x="14.5" y="0.0" width="140.5" height="25"/>
@@ -413,8 +413,8 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="iQA-4u-RrU" secondAttribute="bottom" constant="8.5" id="OOO-YO-Pg2"/>
-                                            <constraint firstItem="iQA-4u-RrU" firstAttribute="centerX" secondItem="xPU-ge-ABU" secondAttribute="centerX" id="viA-Ty-orY"/>
+                                            <constraint firstItem="iQA-4u-RrU" firstAttribute="centerY" secondItem="xPU-ge-ABU" secondAttribute="centerY" id="eVN-zH-D7w"/>
+                                            <constraint firstItem="iQA-4u-RrU" firstAttribute="centerX" secondItem="xPU-ge-ABU" secondAttribute="centerX" id="lNd-Qh-wwk"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bop-mT-dVi">
@@ -426,10 +426,10 @@
                                         </buttonConfiguration>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Q2o-er-SHf">
-                                        <rect key="frame" x="8" y="428" width="358" height="17"/>
+                                        <rect key="frame" x="8" y="392.5" width="358" height="52.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-fs-wkS">
-                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="52.5"/>
                                                 <color key="tintColor" red="0.80630141499999997" green="0.23126742240000001" blue="0.17002838849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="🔥Popüler">
@@ -437,7 +437,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMq-w2-XiU">
-                                                <rect key="frame" x="188.5" y="0.0" width="169.5" height="17"/>
+                                                <rect key="frame" x="188.5" y="0.0" width="169.5" height="52.5"/>
                                                 <color key="tintColor" red="0.80630141499999997" green="0.23126742240000001" blue="0.17002838849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="%10 İndirim">
@@ -467,7 +467,7 @@
                         <viewLayoutGuide key="safeArea" id="Hhu-ua-w3e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WfQ-5U-HlG" firstAttribute="height" secondItem="S2b-bT-q0U" secondAttribute="height" multiplier="0.44" id="1RQ-w3-YJv"/>
+                            <constraint firstItem="WfQ-5U-HlG" firstAttribute="height" secondItem="S2b-bT-q0U" secondAttribute="height" multiplier="0.4" id="1RQ-w3-YJv"/>
                             <constraint firstItem="Hhu-ua-w3e" firstAttribute="bottom" secondItem="aqM-rZ-HU9" secondAttribute="bottom" constant="20" id="4UO-FR-yl9"/>
                             <constraint firstItem="Hhu-ua-w3e" firstAttribute="trailing" secondItem="aqM-rZ-HU9" secondAttribute="trailing" constant="20" id="AJ0-tB-Khg"/>
                             <constraint firstItem="aqM-rZ-HU9" firstAttribute="leading" secondItem="Hhu-ua-w3e" secondAttribute="leading" constant="20" id="TEe-w3-hMG"/>

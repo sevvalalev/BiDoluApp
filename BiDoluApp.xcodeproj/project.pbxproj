@@ -34,7 +34,6 @@
 		A43DEF8D299405F30000EA1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43DEF8C299405F30000EA1C /* Assets.xcassets */; };
 		A43DEF90299405F30000EA1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43DEF8E299405F30000EA1C /* LaunchScreen.storyboard */; };
 		A44B5ED8299A759600911436 /* FoodsAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B5ED7299A759600911436 /* FoodsAnswer.swift */; };
-		A45B6E1129A6A2EF009B91C8 /* word1.json in Resources */ = {isa = PBXBuildFile; fileRef = A45B6E1029A6A2EE009B91C8 /* word1.json */; };
 		A466EEEF29A7845B0066D3A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466EEEE29A7845B0066D3A3 /* Constants.swift */; };
 		A49B930B29A161EC005718AC /* FoodOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B930A29A161EC005718AC /* FoodOrders.swift */; };
 		A49B930D29A16202005718AC /* FoodOrdersAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B930C29A16202005718AC /* FoodOrdersAnswer.swift */; };
@@ -42,9 +41,10 @@
 		A49D86572996E1C70010628F /* yellowdelivery.json in Resources */ = {isa = PBXBuildFile; fileRef = A49D86562996E1C70010628F /* yellowdelivery.json */; };
 		A4C53DB329A2662F003DBACC /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C53DB129A2662E003DBACC /* OrdersTableViewCell.swift */; };
 		A4C53DB429A2662F003DBACC /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C53DB229A2662F003DBACC /* OrdersTableViewCell.xib */; };
-		A4E60A8A299428A20013A3CE /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = A4E60A89299428A10013A3CE /* food.json */; };
 		A4E60A8C29942ED70013A3CE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60A8B29942ED70013A3CE /* LoginVC.swift */; };
 		A4E60A8E29942EEB0013A3CE /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E60A8D29942EEB0013A3CE /* RegisterVC.swift */; };
+		E4EB05E829AA223600A135E4 /* order.json in Resources */ = {isa = PBXBuildFile; fileRef = E4EB05E729AA223600A135E4 /* order.json */; };
+		E4EB05F829AA2C5900A135E4 /* foodWheel.json in Resources */ = {isa = PBXBuildFile; fileRef = E4EB05F729AA2C5900A135E4 /* foodWheel.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +79,6 @@
 		A43DEF8F299405F30000EA1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A43DEF91299405F30000EA1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A44B5ED7299A759600911436 /* FoodsAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsAnswer.swift; sourceTree = "<group>"; };
-		A45B6E1029A6A2EE009B91C8 /* word1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = word1.json; sourceTree = "<group>"; };
 		A466EEEE29A7845B0066D3A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A49B930A29A161EC005718AC /* FoodOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrders.swift; sourceTree = "<group>"; };
 		A49B930C29A16202005718AC /* FoodOrdersAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOrdersAnswer.swift; sourceTree = "<group>"; };
@@ -87,9 +86,10 @@
 		A49D86562996E1C70010628F /* yellowdelivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yellowdelivery.json; sourceTree = "<group>"; };
 		A4C53DB129A2662E003DBACC /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
 		A4C53DB229A2662F003DBACC /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
-		A4E60A89299428A10013A3CE /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
 		A4E60A8B29942ED70013A3CE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A4E60A8D29942EEB0013A3CE /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		E4EB05E729AA223600A135E4 /* order.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
+		E4EB05F729AA2C5900A135E4 /* foodWheel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foodWheel.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,10 +194,10 @@
 				A43DEF8E299405F30000EA1C /* LaunchScreen.storyboard */,
 				A43DEF91299405F30000EA1C /* Info.plist */,
 				A4276885299C0A9A00CAC315 /* GoogleService-Info.plist */,
-				A45B6E1029A6A2EE009B91C8 /* word1.json */,
-				A4E60A89299428A10013A3CE /* food.json */,
+				E4EB05F729AA2C5900A135E4 /* foodWheel.json */,
 				A49D86542996E1C10010628F /* boxdelivery.json */,
 				A49D86562996E1C70010628F /* yellowdelivery.json */,
+				E4EB05E729AA223600A135E4 /* order.json */,
 			);
 			path = BiDoluApp;
 			sourceTree = "<group>";
@@ -295,13 +295,13 @@
 				A4C53DB429A2662F003DBACC /* OrdersTableViewCell.xib in Resources */,
 				A43DEF90299405F30000EA1C /* LaunchScreen.storyboard in Resources */,
 				A4276886299C0A9B00CAC315 /* GoogleService-Info.plist in Resources */,
-				A4E60A8A299428A20013A3CE /* food.json in Resources */,
 				A43DEF8D299405F30000EA1C /* Assets.xcassets in Resources */,
+				E4EB05F829AA2C5900A135E4 /* foodWheel.json in Resources */,
 				A49D86572996E1C70010628F /* yellowdelivery.json in Resources */,
-				A45B6E1129A6A2EF009B91C8 /* word1.json in Resources */,
 				A49D86552996E1C20010628F /* boxdelivery.json in Resources */,
 				A43DEF8B299405EF0000EA1C /* Main.storyboard in Resources */,
 				A40E28AC2994409E00950184 /* CollectionViewCell.xib in Resources */,
+				E4EB05E829AA223600A135E4 /* order.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
