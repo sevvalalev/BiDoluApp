@@ -11,6 +11,10 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
     var interactor: PresenterToInteractorFoodOrdersProtocol?
     var view: PresenterToViewFoodOrdersProtocol?
     
+    private var foodList: [FoodOrders] = []
+    
+    private let dispatchGroup = DispatchGroup()
+    
     func giveOrder() {
         
     }
@@ -23,6 +27,17 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
         interactor?.deleteOrder(sepet_yemek_id: sepet_yemek_id, kullanici_adi: kullanici_adi)
     }
     
+    func deleteCard() {
+        for food in foodList {
+            guard let foodCardId = food.sepet_yemek_id else { return }
+            dispatchGroup.enter()
+            interactor?.deleteOrder(sepet_yemek_id: foodCardId, kullanici_adi: C.User.username ?? "")
+        }
+        
+        dispatchGroup.notify(queue: .main) { [weak self] in
+            self?.interactor?.loadOrders(kullanici_adi: C.User.username ?? "")
+        }
+    }
 }
 
 extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
@@ -46,7 +61,11 @@ extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
                 editedList.append(food)
             }
         }
-        
+        self.foodList = editedList
         view?.sendOrdersToView(foodList: editedList, totalPrice: total)
+    }
+    
+    func deleteOrderCompleted() {
+        dispatchGroup.leave()
     }
 }

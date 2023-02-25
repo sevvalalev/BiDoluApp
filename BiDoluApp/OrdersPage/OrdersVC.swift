@@ -42,7 +42,7 @@ class OrdersVC: UIViewController {
     }
     
     @IBAction private func deleteTapped(_ sender: UIBarButtonItem) {
-        //delete
+        presenter?.deleteCard()
     }
 }
 

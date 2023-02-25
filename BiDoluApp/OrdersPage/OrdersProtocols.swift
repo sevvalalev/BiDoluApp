@@ -14,6 +14,7 @@ protocol ViewToPresenterFoodOrdersProtocol {
     func giveOrder()
     func loadOrders(kullanici_adi:String)
     func deleteOrder(sepet_yemek_id:String,kullanici_adi:String)
+    func deleteCard()
 }
 
 protocol PresenterToInteractorFoodOrdersProtocol {
@@ -26,6 +27,7 @@ protocol PresenterToInteractorFoodOrdersProtocol {
 
 protocol InteractorToPresenterFoodOrdersProtocol {
     func sendOrdersToPresenter(foodList: [FoodOrders])
+    func deleteOrderCompleted()
 }
 
 protocol PresenterToViewFoodOrdersProtocol {

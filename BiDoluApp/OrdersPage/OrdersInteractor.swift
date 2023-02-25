@@ -23,6 +23,7 @@ class OrdersInteractor: PresenterToInteractorFoodOrdersProtocol {
                     }
                     print("Yemekler sepete başarı ile çekildi.")
                 }catch{
+                    self.presenter?.sendOrdersToPresenter(foodList: [])
                     print(error.localizedDescription)
                 }
             }
@@ -36,11 +37,11 @@ class OrdersInteractor: PresenterToInteractorFoodOrdersProtocol {
                 do{
                     let response = try JSONDecoder().decode(FoodOrdersAnswer.self, from: data)
                     print("Sipariş silindi.")
-                    self.loadOrders(kullanici_adi: kullanici_adi)
                 }catch{
                     print(error.localizedDescription)
                 }
             }
+            self.presenter?.deleteOrderCompleted()
         }
     }
     
