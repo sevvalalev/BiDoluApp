@@ -40,7 +40,7 @@ class FoodsInteractor: PresenterToInteractorFoodsProtocol {
                 }catch{
                     print(error.localizedDescription)
                 }
-//                self.presenter?.foodAddedToCard()
+                self.presenter?.addCardCompleted()
             }
         }
     }

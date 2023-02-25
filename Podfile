@@ -8,7 +8,7 @@ target 'BiDoluApp' do
 pod 'lottie-ios'
 pod 'Alamofire'
 pod 'Kingfisher'
-
+pod 'ProgressHUD'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'FirebaseAnalytics'

@@ -65,4 +65,8 @@ extension FoodsPresenter : InteractorToPresenterFoodsProtocol {
         self.foodList = foodList
         foodsView?.sendDataToView()
     }
+    
+    func addCardCompleted() {
+        foodsView?.hideHUD()
+    }
 }

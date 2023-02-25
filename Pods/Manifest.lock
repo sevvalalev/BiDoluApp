@@ -778,6 +778,7 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - ProgressHUD (13.6.2)
   - PromisesObjC (2.1.1)
 
 DEPENDENCIES:
@@ -789,6 +790,7 @@ DEPENDENCIES:
   - FirebaseStorage
   - Kingfisher
   - lottie-ios
+  - ProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -818,6 +820,7 @@ SPEC REPOS:
     - Libuv-gRPC
     - lottie-ios
     - nanopb
+    - ProgressHUD
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -847,8 +850,9 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  ProgressHUD: 355915c8f033e626788fa9b0d99d06e8691595ab
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 4cf8be0c5c604d358116e83282e4198a238c59d0
+PODFILE CHECKSUM: 3e079861ca0e5b4cf2319748cd6ff8e86bde7958
 
 COCOAPODS: 1.11.3

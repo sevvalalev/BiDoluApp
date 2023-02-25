@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseAuth
+import ProgressHUD
 
 class LoginVC: UIViewController {
     
@@ -39,6 +40,7 @@ class LoginVC: UIViewController {
         passwordTextField.layer.borderColor = UIColor.systemRed.withAlphaComponent(0.5).cgColor
         passwordTextField.layer.borderWidth = 1
         passwordTextField.clipsToBounds = true
+        passwordTextField.isSecureTextEntry = true
         
         loginButton.layer.cornerRadius = 15
     }
@@ -46,7 +48,9 @@ class LoginVC: UIViewController {
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
         
         if emailTextField.text != "" && passwordTextField.text != "" {
+            ProgressHUD.show("Yükleniyor", interaction: false)
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authdata, error in
+                ProgressHUD.dismiss()
                 if error != nil {
                     self.makeAlert(titleInput: "Hata", messageInput: "Email ya da şifre hatalı. Exp: \(String(describing: error?.localizedDescription))")
                 }else{

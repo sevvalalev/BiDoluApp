@@ -31,12 +31,14 @@ protocol PresenterToInteractorFoodsProtocol {
 //Taşıyıcı Protocoller
 protocol InteractorToPresenterFoodsProtocol {
     func sendDataToPresenter(foodList:[Foods])
+    func addCardCompleted()
 }
 
 protocol PresenterToViewFoodsProtocol {
     func sendDataToView()
     func animateLottie(filename: String)
     func navigateToDetailVC(food: Foods)
+    func hideHUD()
 }
 
 //Router Protocol

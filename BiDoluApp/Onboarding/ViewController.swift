@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import FirebaseAuth
+import ProgressHUD
 
 class ViewController: UIViewController {    
     
@@ -19,11 +20,6 @@ class ViewController: UIViewController {
         loginButton.backgroundColor = .systemRed
         loginButton.layer.cornerRadius = 15
         
-         /*
-        appNameView.contentMode = .scaleAspectFit
-        appNameView.loopMode = .loop
-        appNameView.animationSpeed = 0.5
-        appNameView.play() */
     }
 
 

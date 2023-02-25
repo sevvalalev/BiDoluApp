@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import ProgressHUD
 
 class FoodsVC: UIViewController {
     
@@ -133,7 +134,12 @@ extension FoodsVC: UICollectionViewDelegate, UICollectionViewDataSource {
 extension FoodsVC: SelectedFoodProtocol {
     func addSelectedFood(with food: Foods?) {
         guard let food = food else { return }
+        ProgressHUD.show("Ekleniyor")
         presenter?.addFoodToCard(food: food)
+    }
+    
+    func hideHUD() {
+        ProgressHUD.dismiss()
     }
 }
 
