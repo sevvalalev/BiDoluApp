@@ -20,7 +20,6 @@ protocol ViewToPresenterFoodOrdersProtocol {
 protocol PresenterToInteractorFoodOrdersProtocol {
     var presenter: InteractorToPresenterFoodOrdersProtocol? {get set}
     
-    func giveOrder()
     func loadOrders(kullanici_adi:String)
     func deleteOrder(sepet_yemek_id:String,kullanici_adi:String)
 }

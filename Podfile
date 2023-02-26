@@ -14,6 +14,8 @@ pod 'FirebaseFirestore'
 pod 'FirebaseAnalytics'
 pod 'FirebaseCore'
 pod 'FirebaseStorage'
+pod 'IQKeyboardManagerSwift'
+
 
   # Pods for BiDoluApp
 

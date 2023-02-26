@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walpapper" translatesAutoresizingMaskIntoConstraints="NO" id="739-yV-qVb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="5GH-hy-hRl">
                                 <rect key="frame" x="10" y="162" width="394" height="313.5"/>
@@ -80,7 +80,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LGO-a8-4vv" secondAttribute="trailing" constant="110" id="VsV-0h-Can"/>
                             <constraint firstItem="5GH-hy-hRl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Zxa-RQ-Xfb"/>
                             <constraint firstItem="739-yV-qVb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bSb-fF-n9I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="739-yV-qVb" secondAttribute="bottom" id="dsQ-Mt-Z1E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="739-yV-qVb" secondAttribute="bottom" constant="-34" id="dsQ-Mt-Z1E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sfk-jQ-gFI" secondAttribute="bottom" constant="79" id="f52-ab-RBo"/>
                             <constraint firstItem="9Eb-eN-Cbe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="feQ-57-RvQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sfk-jQ-gFI" secondAttribute="trailing" constant="110" id="hGe-zt-wYr"/>

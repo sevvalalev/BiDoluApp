@@ -764,6 +764,7 @@ PODS:
     - Libuv-gRPC (= 0.0.10)
   - gRPC-Core/Interface (1.44.0)
   - GTMSessionFetcher/Core (2.1.0)
+  - IQKeyboardManagerSwift (6.5.11)
   - Kingfisher (7.6.1)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
@@ -788,6 +789,7 @@ DEPENDENCIES:
   - FirebaseCore
   - FirebaseFirestore
   - FirebaseStorage
+  - IQKeyboardManagerSwift
   - Kingfisher
   - lottie-ios
   - ProgressHUD
@@ -815,6 +817,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - Kingfisher
     - leveldb-library
     - Libuv-gRPC
@@ -845,6 +848,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   Kingfisher: 93a3c6d0d551658a31e19f21747e1d15cb39d525
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
@@ -853,6 +857,6 @@ SPEC CHECKSUMS:
   ProgressHUD: 355915c8f033e626788fa9b0d99d06e8691595ab
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 3e079861ca0e5b4cf2319748cd6ff8e86bde7958
+PODFILE CHECKSUM: ed770b38784c7ffbd4ffedd2366b5884d547df85
 
 COCOAPODS: 1.11.3

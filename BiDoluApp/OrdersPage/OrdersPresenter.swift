@@ -25,7 +25,13 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
     }
     
     func deleteOrder(sepet_yemek_id: String, kullanici_adi: String) {
-        interactor?.deleteOrder(sepet_yemek_id: sepet_yemek_id, kullanici_adi: kullanici_adi)
+        let deletedFood = foodList.first(where: {$0.sepet_yemek_id == sepet_yemek_id})
+        let deletedFoods = foodList.filter({$0.yemek_adi == deletedFood?.yemek_adi})
+        for food in deletedFoods {
+            guard let foodCardId = food.sepet_yemek_id else { return }
+            dispatchGroup.enter()
+            interactor?.deleteOrder(sepet_yemek_id: foodCardId, kullanici_adi: C.User.username ?? "")
+        }
     }
     
     func deleteCard() {
@@ -33,10 +39,6 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
             guard let foodCardId = food.sepet_yemek_id else { return }
             dispatchGroup.enter()
             interactor?.deleteOrder(sepet_yemek_id: foodCardId, kullanici_adi: C.User.username ?? "")
-        }
-        
-        dispatchGroup.notify(queue: .main) { [weak self] in
-            self?.interactor?.loadOrders(kullanici_adi: C.User.username ?? "")
         }
     }
 }
@@ -69,5 +71,9 @@ extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
     
     func deleteOrderCompleted() {
         dispatchGroup.leave()
+        
+        dispatchGroup.notify(queue: .main) { [weak self] in
+            self?.interactor?.loadOrders(kullanici_adi: C.User.username ?? "")
+        }
     }
 }
