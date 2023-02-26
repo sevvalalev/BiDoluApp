@@ -27,6 +27,7 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
     func deleteOrder(sepet_yemek_id: String, kullanici_adi: String) {
         let deletedFood = foodList.first(where: {$0.sepet_yemek_id == sepet_yemek_id})
         let deletedFoods = foodList.filter({$0.yemek_adi == deletedFood?.yemek_adi})
+        ProgressHUD.show("Siliniyor")
         for food in deletedFoods {
             guard let foodCardId = food.sepet_yemek_id else { return }
             dispatchGroup.enter()
@@ -35,6 +36,7 @@ class OrdersPresenter: ViewToPresenterFoodOrdersProtocol {
     }
     
     func deleteCard() {
+        ProgressHUD.show("Siliniyor")
         for food in foodList {
             guard let foodCardId = food.sepet_yemek_id else { return }
             dispatchGroup.enter()
@@ -47,7 +49,7 @@ extension OrdersPresenter: InteractorToPresenterFoodOrdersProtocol {
     func sendOrdersToPresenter(foodList: [FoodOrders]) {
         view?.hideHUD()
         self.foodList = foodList
-        let prices = foodList.compactMap({Int($0.yemek_fiyat ?? "0")})
+        let prices = foodList.compactMap({ (Int($0.yemek_fiyat ?? "0") ?? 0) * (Int($0.yemek_siparis_adet ?? "0") ?? 0) })
         let total = prices.reduce(0, +)
         
         var editedList: [FoodOrders] = []
