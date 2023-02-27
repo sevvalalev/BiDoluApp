@@ -30,6 +30,7 @@ class FoodsVC: UIViewController {
         customNib()
         configureLayout()
         FoodsRouter.createModule(ref: self)
+        setTapGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +38,10 @@ class FoodsVC: UIViewController {
         presenter?.loadFoods()
     }
     
+    private func setTapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
     
     private func configureLayout() {
         let layout = UICollectionViewFlowLayout()
@@ -70,6 +75,11 @@ class FoodsVC: UIViewController {
     @IBAction private func sortingTapped(_ sender: UIButton) {
         presenter?.sortFoodPrice()
     }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
 }
 
 
