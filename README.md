@@ -6,7 +6,7 @@ I created a food application with VIPER architecture in my last homework in Swif
 
 #### :mag: In this project, I use: ####
 
-- VIPER design pattern
+- VIPER Architecture
 - Firebase Auth
 - Alamofire
 - Kingfisher
