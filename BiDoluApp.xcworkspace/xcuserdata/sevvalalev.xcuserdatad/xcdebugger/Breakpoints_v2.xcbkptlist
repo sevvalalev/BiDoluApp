@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
-            landmarkName = "loadFoods()"
-            landmarkType = "7">
+            landmarkName = "FoodsPresenter"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,8 +158,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "FoodsVC"
-            landmarkType = "21">
+            landmarkName = "animateLottie(filename:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,8 +254,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "sendOrdersToView(foodList:)"
-            landmarkType = "7">
+            landmarkName = "OrdersVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -350,7 +350,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
             endingLineNumber = "61"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkName = "sendOrdersToView(foodList:totalPrice:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -366,8 +366,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
+            landmarkName = "OrdersVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -446,7 +446,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "loadOrders(kullanici_adi:)"
+            landmarkName = "orderButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -526,7 +526,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkName = "sendDataToView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -542,40 +542,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "configureUI(with:)"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C9DC7FF7-0D85-4043-8E92-17EF64A45B4C - b8362a3d14833ed6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BiDoluApp.CollectionViewCell.configureUI(with: Swift.Optional&lt;BiDoluApp.Foods&gt;) -&gt; ()"
-                  moduleName = "BiDoluApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/BiDoluApp/BiDoluApp/CustomCell/CollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "185">
-               </Location>
-               <Location
-                  uuid = "C9DC7FF7-0D85-4043-8E92-17EF64A45B4C - b8362a3d14833ed6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BiDoluApp.CollectionViewCell.configureUI(with: Swift.Optional&lt;BiDoluApp.Foods&gt;) -&gt; ()"
-                  moduleName = "BiDoluApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/BiDoluApp/BiDoluApp/CustomCell/CollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "434">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -590,7 +558,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "configureUI(with:)"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

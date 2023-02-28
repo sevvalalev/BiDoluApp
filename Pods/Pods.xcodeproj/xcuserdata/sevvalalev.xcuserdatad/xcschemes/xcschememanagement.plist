@@ -130,6 +130,11 @@
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>31</integer>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -150,6 +155,11 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>27</integer>
+		</dict>
+		<key>ProgressHUD.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
 		</dict>
 		<key>PromisesObjC.xcscheme</key>
 		<dict>

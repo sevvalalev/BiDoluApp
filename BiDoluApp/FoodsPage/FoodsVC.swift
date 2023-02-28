@@ -30,7 +30,7 @@ class FoodsVC: UIViewController {
         customNib()
         configureLayout()
         FoodsRouter.createModule(ref: self)
-        setTapGesture()
+        //setTapGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
